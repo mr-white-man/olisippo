@@ -1,5 +1,5 @@
 ---
-title: Chrono Breach
+title: Batatas
 description: A mobile puzzle-action game where players rewind and fast-forward time to solve combat encounters. 250K+ downloads across iOS and Android.
 tags: [Unity, C#, Mobile, Time Mechanics, TouchInput, Analytics]
 github: https://github.com/kadexero/chrono-breach

@@ -1,4 +1,4 @@
-import { defineStackbitConfig, SiteMapEntry } from '@stackbit/types'
+import { defineStackbitConfig, SiteMapEntry, DocumentStringLikeFieldNonLocalized } from '@stackbit/types'
 import { GitContentSource } from '@stackbit/cms-git'
 
 export default defineStackbitConfig({
@@ -14,7 +14,7 @@ export default defineStackbitConfig({
         {
           name: 'blog',
           type: 'page',
-          urlPath: '/blog/{_id}',
+          urlPath: '/blog/{slug}',
           filePath: 'content/blog/{slug}.md',
           fields: [
             { name: 'title', type: 'string', required: true },
@@ -79,19 +79,19 @@ export default defineStackbitConfig({
     }),
   ],
 
-  siteMap: ({ documents }): SiteMapEntry[] => {
-    const entries: SiteMapEntry[] = []
-    for (const doc of documents) {
-      if (doc.modelName === 'blog') {
+  sitemap: ({ documents, models }): SiteMapEntry[] => {
+    const pageModels = models.filter((m) => m.type === 'page').map((m) => m.name)
+    return documents
+      .filter((doc) => pageModels.includes(doc.modelName))
+      .map((doc) => {
         const slug = doc.id.replace(/^blog\//, '').replace(/\.md$/, '')
-        entries.push({
+        const titleField = doc.fields.title as DocumentStringLikeFieldNonLocalized
+        return {
           stableId: doc.id,
-          label: doc.fields.title?.toString() ?? slug,
+          label: titleField?.value ?? slug,
           urlPath: `/blog/${slug}`,
           document: doc,
-        })
-      }
-    }
-    return entries
+        }
+      })
   },
 })

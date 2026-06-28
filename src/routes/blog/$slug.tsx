@@ -27,6 +27,8 @@ function BlogPost() {
   }
 
   const html = marked(post.content)
+  // Object ID matches the file path used by Stackbit: blog/slug.md
+  const objectId = `blog/${post._meta.path}.md`
 
   return (
     <div className="min-h-screen page-enter">
@@ -39,7 +41,7 @@ function BlogPost() {
           ← BACK_TO_THOUGHTS
         </Link>
 
-        <article>
+        <article data-sb-object-id={objectId}>
           <header className="mb-10">
             <div className="font-mono-game text-xs mb-4" style={{ color: 'rgba(57,255,20,0.7)' }}>
               {new Date(post.date).toLocaleDateString('en-US', {
@@ -47,15 +49,25 @@ function BlogPost() {
                 month: 'long',
                 day: 'numeric',
               })}
-              {' // '}{post.author}
+              {' // '}
+              <span data-sb-field-path="author">{post.author}</span>
             </div>
 
             <h1
+              data-sb-field-path="title"
               className="font-heading text-3xl sm:text-4xl font-black mb-6 leading-tight"
               style={{ color: 'white' }}
             >
               {post.title}
             </h1>
+
+            <p
+              data-sb-field-path="summary"
+              className="text-base mb-6 leading-relaxed"
+              style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}
+            >
+              {post.summary}
+            </p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map((tag) => (
@@ -81,9 +93,10 @@ function BlogPost() {
           </header>
 
           <div
+            data-sb-field-path="content"
             className="prose-game"
             style={{ color: 'rgba(255,255,255,0.75)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500, fontSize: '1.05rem', lineHeight: '1.8' }}
-            dangerouslySetInnerHTML={{ __html: html }}
+            dangerouslySetInnerHTML={{ __html: html as string }}
           />
         </article>
 

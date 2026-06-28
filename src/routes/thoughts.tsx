@@ -41,6 +41,7 @@ function ThoughtsPage() {
             className="block group"
           >
             <div
+              data-sb-object-id={`blog/${post._meta.path}.md`}
               className="game-card game-card-green p-6 flex gap-6 items-start"
               style={{ border: '1px solid rgba(57,255,20,0.15)' }}
             >
@@ -57,15 +58,21 @@ function ThoughtsPage() {
                     month: 'short',
                     day: 'numeric',
                   })}
-                  {' // '}{post.author}
+                  {' // '}
+                  <span data-sb-field-path="author">{post.author}</span>
                 </div>
                 <h2
+                  data-sb-field-path="title"
                   className="font-heading text-xl font-bold mb-2 group-hover:text-green-400 transition-colors"
                   style={{ color: 'white' }}
                 >
                   {post.title}
                 </h2>
-                <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}>
+                <p
+                  data-sb-field-path="summary"
+                  className="text-sm leading-relaxed"
+                  style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}
+                >
                   {post.summary}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-3">

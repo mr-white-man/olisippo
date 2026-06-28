@@ -1,6 +1,6 @@
 ---
 type: blog
-title: Why Procedural Generation is the Future of Replayabil
+title: Why Procedural Generation is the Future of Replayability
 date: '2026-02-10'
 summary: >-
   Handcrafted levels are beautiful but finite. Procedural generation, done

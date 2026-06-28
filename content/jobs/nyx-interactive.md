@@ -1,4 +1,5 @@
 ---
+type: jobs
 jobTitle: Senior Game Developer
 company: Nyx Interactive Studios
 location: Remote

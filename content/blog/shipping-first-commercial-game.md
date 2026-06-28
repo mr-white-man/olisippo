@@ -1,5 +1,6 @@
 ---
-title: Shipping Your First Commercial Game: What the Tutorials Don't Cover
+type: blog
+title: "Shipping Your First Commercial Game: What the Tutorials Don't Cover"
 date: 2025-11-18
 summary: The technical challenges of indie game development are well-documented. The business, legal, and psychological challenges are not. Here's what I learned shipping Void Protocol.
 tags: [Indie Dev, Shipping, Business, Lessons]

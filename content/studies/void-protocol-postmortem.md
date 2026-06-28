@@ -1,4 +1,5 @@
 ---
+type: studies
 title: "Void Protocol Post-Mortem: What Worked, What Broke, What We'd Do Differently"
 subtitle: A technical and design retrospective on shipping a roguelike FPS with 8 developers in 14 months
 date: 2026-01-20

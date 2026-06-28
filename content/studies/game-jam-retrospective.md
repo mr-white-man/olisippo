@@ -1,5 +1,6 @@
 ---
-title: "72-Hour Game Jam Retrospective: The Last Signal"
+type: studies
+title: ""72-Hour Game Jam Retrospective: The Last Signal""
 subtitle: How a horror jam entry became a 4.8-star release — and what the jam format taught about design under constraints
 date: 2025-08-14
 tags: [Game Jam, Horror, Solo Dev, Narrative Design, FMOD]

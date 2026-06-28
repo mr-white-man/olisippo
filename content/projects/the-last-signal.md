@@ -1,4 +1,5 @@
 ---
+type: projects
 title: The Last Signal
 description: A psychological horror narrative game where players investigate an abandoned Antarctic research station through corrupted audio logs and fragmented terminal entries.
 tags: [Unity, C#, Narrative Design, FMOD, Horror, Atmosphere]

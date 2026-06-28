@@ -1,5 +1,6 @@
 ---
-title: Game Feel: The Invisible Work That Makes Players Stay
+type: blog
+title: "Game Feel: The Invisible Work That Makes Players Stay"
 date: 2026-01-05
 summary: No one talks about game feel in design documents. It lives in the gap between specification and implementation — in frame data, screen shake, and particle counts.
 tags: [Game Feel, Polish, Design, Animation]

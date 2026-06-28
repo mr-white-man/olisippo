@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Neon Drift
 description: An arcade racing game set in a neon-soaked cyberpunk city. Features a custom physics model, destructible environments, and an original synthwave soundtrack.
 tags: [Unreal Engine, C++, Blueprints, Physics, Procedural Audio]

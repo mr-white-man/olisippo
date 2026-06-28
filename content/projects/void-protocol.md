@@ -1,4 +1,5 @@
 ---
+type: projects
 title: Void Protocol
 description: A roguelike FPS with fully procedural level generation, holographic UI, and 4-player online co-op. Shipped on Steam with 40K+ players.
 tags: [Unity, C#, HLSL, Procedural Gen, Multiplayer, Steam]

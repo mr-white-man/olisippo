@@ -1,4 +1,5 @@
 ---
+type: jobs
 jobTitle: Game Developer
 company: Glitch Forge
 location: Austin, TX

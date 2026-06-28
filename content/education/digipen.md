@@ -1,4 +1,5 @@
 ---
+type: education
 school: DigiPen Institute of Technology
 summary: Bachelor of Science in Computer Science in Real-Time Interactive Simulation (BSRTIS). Graduated with distinction, senior capstone project won Best Technical Achievement.
 startDate: 2016-09-01

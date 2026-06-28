@@ -1,9 +1,15 @@
 ---
 type: blog
 title: Why Procedural Generation is the Future of Replayability
-date: 2026-02-10
-summary: Handcrafted levels are beautiful but finite. Procedural generation, done right, can create infinite variance while still feeling authored. Here's how I approach it.
-tags: [Procedural Gen, Game Design, Systems]
+date: '2026-02-10'
+summary: >-
+  Handcrafted levels are beautiful but finite. Procedural generation, done
+  right, can create infinite variance while still feeling authored. Here's how I
+  approach it.
+tags:
+  - Procedural Gen
+  - Game Design
+  - Systems
 author: Kade Xero
 ---
 

@@ -25,6 +25,8 @@
     "tailwindcss": "^4.0.6",
     "tailwindcss-animate": "^1.0.7",
     "vite-tsconfig-paths": "^6.0.2",
+    "@stackbit/cms-git": "^1.0.38",
+    "@stackbit/types": "^0.7.0",
     "zod": "^4.3.5"
   },
   "devDependencies": {

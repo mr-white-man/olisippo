@@ -16,15 +16,6 @@
                     "description": "Shipped titles, prototypes, and game jam entries spanning FPS, puzzle, horror, and racing genres."
                 },
                 {
-                    "id": "thesis",
-                    "label": "THESIS",
-                    "sublabel": "Research & Theory",
-                    "href": "/thesis",
-                    "accent": "var(--neon-magenta)",
-                    "icon": "⬡",
-                    "description": "Academic research on procedural narrative systems and emergent gameplay."
-                },
-                {
                     "id": "thoughts",
                     "label": "THOUGHTS",
                     "sublabel": "Ideas & Writing",

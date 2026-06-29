@@ -1,38 +1,78 @@
 {
-  "type": "page",
-  "title": "Home",
-  "sections": [
-    {
-      "type": "HeroSection",
-      "badge": "// SYSTEM.BOOT — PORTFOLIO.V2.6",
-      "title": "KADE XERO",
-      "subtitle": "GAME_DEVELOPER // SYSTEMS_ARCHITECT // WORLD_BUILDER",
-      "tagline": "Building interactive experiences that live at the intersection of technical systems and dark imagination. 6 years. 4 shipped titles. 40K+ players.",
-      "ctaPrimary": { "label": "View Games", "href": "/projects" },
-      "ctaSecondary": { "label": "Work Together", "href": "/contact" }
-    },
-    {
-      "type": "StatsSection",
-      "stats": [
-        { "num": "4", "label": "Shipped Titles" },
-        { "num": "40K+", "label": "Players" },
-        { "num": "6 YRS", "label": "Experience" }
-      ]
-    },
-    {
-      "type": "NavGridSection",
-      "heading": "NAVIGATION.MATRIX",
-      "items": [
-        { "id": "games", "label": "GAME.PROJECTS", "sublabel": "Interactive Worlds Built", "href": "/projects", "accent": "var(--neon-cyan)", "icon": "◈", "description": "Shipped titles, prototypes, and game jam entries spanning FPS, puzzle, horror, and racing genres." },
-        { "id": "thesis", "label": "THESIS", "sublabel": "Research & Theory", "href": "/thesis", "accent": "var(--neon-magenta)", "icon": "⬡", "description": "Academic research on procedural narrative systems and emergent gameplay." },
-        { "id": "thoughts", "label": "THOUGHTS", "sublabel": "Ideas & Writing", "href": "/thoughts", "accent": "var(--neon-green)", "icon": "▸", "description": "Dev logs, design philosophy, and technical deep-dives." },
-        { "id": "studies", "label": "CASE.STUDIES", "sublabel": "Post-Mortems", "href": "/studies", "accent": "var(--neon-purple)", "icon": "◎", "description": "Retrospectives on shipped projects — what worked, what broke, and what was learned." },
-        { "id": "contact", "label": "CONTACT", "sublabel": "Get In Touch", "href": "/contact", "accent": "var(--neon-orange)", "icon": "◇", "description": "Open to collaboration, contracts, and interesting conversations." }
-      ]
-    },
-    {
-      "type": "LatestPostSection",
-      "heading": "LATEST_TRANSMISSION"
-    }
-  ]
+    "type": "page",
+    "title": "Home",
+    "sections": [
+        {
+            "type": "StatsSection",
+            "stats": [
+                {
+                    "num": "4",
+                    "label": "Shipped Titles"
+                },
+                {
+                    "num": "40K+",
+                    "label": "Players"
+                },
+                {
+                    "num": "6 YRS",
+                    "label": "Experience"
+                }
+            ]
+        },
+        {
+            "type": "NavGridSection",
+            "heading": "NAVIGATION.MATRIX",
+            "items": [
+                {
+                    "id": "games",
+                    "label": "GAME.PROJECTS",
+                    "sublabel": "Interactive Worlds Built",
+                    "href": "/projects",
+                    "accent": "var(--neon-cyan)",
+                    "icon": "◈",
+                    "description": "Shipped titles, prototypes, and game jam entries spanning FPS, puzzle, horror, and racing genres."
+                },
+                {
+                    "id": "thesis",
+                    "label": "THESIS",
+                    "sublabel": "Research & Theory",
+                    "href": "/thesis",
+                    "accent": "var(--neon-magenta)",
+                    "icon": "⬡",
+                    "description": "Academic research on procedural narrative systems and emergent gameplay."
+                },
+                {
+                    "id": "thoughts",
+                    "label": "THOUGHTS",
+                    "sublabel": "Ideas & Writing",
+                    "href": "/thoughts",
+                    "accent": "var(--neon-green)",
+                    "icon": "▸",
+                    "description": "Dev logs, design philosophy, and technical deep-dives."
+                },
+                {
+                    "id": "studies",
+                    "label": "CASE.STUDIES",
+                    "sublabel": "Post-Mortems",
+                    "href": "/studies",
+                    "accent": "var(--neon-purple)",
+                    "icon": "◎",
+                    "description": "Retrospectives on shipped projects — what worked, what broke, and what was learned."
+                },
+                {
+                    "id": "contact",
+                    "label": "CONTACT",
+                    "sublabel": "Get In Touch",
+                    "href": "/contact",
+                    "accent": "var(--neon-orange)",
+                    "icon": "◇",
+                    "description": "Open to collaboration, contracts, and interesting conversations."
+                }
+            ]
+        },
+        {
+            "type": "LatestPostSection",
+            "heading": "LATEST_TRANSMISSION"
+        }
+    ]
 }

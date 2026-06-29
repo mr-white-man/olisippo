@@ -3,23 +3,6 @@
     "title": "Home",
     "sections": [
         {
-            "type": "StatsSection",
-            "stats": [
-                {
-                    "num": "4",
-                    "label": "Shipped Titles"
-                },
-                {
-                    "num": "40K+",
-                    "label": "Players"
-                },
-                {
-                    "num": "6 YRS",
-                    "label": "Experience"
-                }
-            ]
-        },
-        {
             "type": "NavGridSection",
             "heading": "NAVIGATION.MATRIX",
             "items": [

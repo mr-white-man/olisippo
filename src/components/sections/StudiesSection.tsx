@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router'
 import { allStudies } from 'content-collections'
 import { marked } from 'marked'
 import { useState } from 'react'
@@ -26,17 +27,39 @@ export function StudiesSection({ index }: { section: any; index: number }) {
               </div>
               <div className="font-mono-game text-xs flex-shrink-0 transition-transform duration-300" style={{ color: accent, transform: isOpen ? 'rotate(90deg)' : 'none' }}>▶</div>
             </button>
+
+            {/* Collapsed: show outcomes preview */}
             {!isOpen && study.outcomes.length > 0 && (
               <div className="px-8 pb-6">
                 <div className="font-mono-game text-xs mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>KEY_OUTCOMES:</div>
                 <ul className="space-y-1">
-                  {study.outcomes.map((outcome, oi) => <li key={oi} className="text-xs flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}><span style={{ color: accent }}>◈</span>{outcome}</li>)}
+                  {study.outcomes.map((outcome, oi) => (
+                    <li key={oi} className="text-xs flex items-start gap-2" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}>
+                      <span style={{ color: accent }}>◈</span>{outcome}
+                    </li>
+                  ))}
                 </ul>
               </div>
             )}
+
+            {/* Expanded: full content + VIEW STUDY link */}
             {isOpen && (
               <div className="px-8 pb-8" style={{ borderTop: `1px solid ${accent}15` }}>
-                <div className="prose-game mt-6" style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500, fontSize: '1rem', lineHeight: '1.75' }} dangerouslySetInnerHTML={{ __html: html }} />
+                <div
+                  className="prose-game mt-6"
+                  style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500, fontSize: '1rem', lineHeight: '1.75' }}
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+                <div className="mt-8 pt-4" style={{ borderTop: `1px solid ${accent}20` }}>
+                  <Link
+                    to="/studies/$slug"
+                    params={{ slug: study._meta.path }}
+                    className="font-mono-game text-xs flex items-center gap-2 w-fit transition-opacity hover:opacity-70"
+                    style={{ color: accent }}
+                  >
+                    <span>◈</span> VIEW STUDY
+                  </Link>
+                </div>
               </div>
             )}
           </div>

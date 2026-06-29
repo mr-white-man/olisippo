@@ -1,14 +1,6 @@
 import { Link, useRouterState } from '@tanstack/react-router'
 import { useState } from 'react'
-
-const navLinks = [
-  { to: '/', label: '// Home' },
-  { to: '/projects', label: '// Games' },
-  { to: '/thesis', label: '// Thesis' },
-  { to: '/studies', label: '// Studies' },
-  { to: '/thoughts', label: '// Thoughts' },
-  { to: '/contact', label: '// Contact' },
-]
+import siteConfig from '../../content/pages/config.json'
 
 export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -24,6 +16,7 @@ export function Nav() {
         borderBottom: '1px solid rgba(0,245,255,0.1)',
         boxShadow: '0 0 30px rgba(0,245,255,0.03)',
       }}
+      data-sb-object-id="pages/config.json"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
@@ -37,28 +30,31 @@ export function Nav() {
                 clipPath: 'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px))',
                 boxShadow: '0 0 8px rgba(0,245,255,0.3)',
               }}
+              data-sb-field-path=".logoText"
             >
-              KX
+              {siteConfig.logoText}
             </div>
             <span
               className="font-heading text-sm font-bold tracking-widest"
               style={{ color: 'var(--neon-cyan)', letterSpacing: '0.2em' }}
+              data-sb-field-path=".siteName"
             >
-              KADE.XERO
+              {siteConfig.siteName}
             </span>
           </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => {
-              const isActive = link.to === '/'
+            {siteConfig.nav.map((link, i) => {
+              const isActive = link.href === '/'
                 ? currentPath === '/'
-                : currentPath.startsWith(link.to)
+                : currentPath.startsWith(link.href)
               return (
                 <Link
-                  key={link.to}
-                  to={link.to}
+                  key={link.href}
+                  to={link.href as any}
                   className={`nav-link ${isActive ? 'nav-link-active' : ''}`}
+                  data-sb-field-path={`.nav[${i}].label`}
                 >
                   {link.label}
                 </Link>
@@ -84,14 +80,14 @@ export function Nav() {
           className="md:hidden px-4 pb-4 pt-2 space-y-3"
           style={{ borderTop: '1px solid rgba(0,245,255,0.1)' }}
         >
-          {navLinks.map((link) => {
-            const isActive = link.to === '/'
+          {siteConfig.nav.map((link, i) => {
+            const isActive = link.href === '/'
               ? currentPath === '/'
-              : currentPath.startsWith(link.to)
+              : currentPath.startsWith(link.href)
             return (
-              <div key={link.to}>
+              <div key={link.href}>
                 <Link
-                  to={link.to}
+                  to={link.href as any}
                   className={`nav-link block ${isActive ? 'nav-link-active' : ''}`}
                   onClick={() => setMobileOpen(false)}
                 >

@@ -92,6 +92,24 @@ export default defineStackbitConfig({
           { name: 'align', type: 'enum', options: ['left', 'center'] },
         ]},
 
+        // ── SITE CONFIG ─────────────────────────────────────────────
+        {
+          name: 'config',
+          type: 'data',
+          filePath: 'content/pages/config.json',
+          fields: [
+            { name: 'siteName', type: 'string', required: true },
+            { name: 'siteTitle', type: 'string', required: true },
+            { name: 'siteDescription', type: 'string' },
+            { name: 'logoText', type: 'string' },
+            { name: 'favicon', type: 'string' },
+            { name: 'nav', type: 'list', items: { type: 'object', fields: [
+              { name: 'label', type: 'string', required: true },
+              { name: 'href', type: 'string', required: true },
+            ]}},
+          ],
+        },
+
         // ── CONTENT MODELS ──────────────────────────────────────────
         {
           name: 'blog', type: 'page',

@@ -1,0 +1,16 @@
+{
+  "type": "config",
+  "siteName": "KADE.XERO",
+  "siteTitle": "Kade Xero — Game Developer",
+  "siteDescription": "Game developer portfolio — interactive experiences, systems design, and dark digital worlds.",
+  "logoText": "KX",
+  "favicon": "/favicon.ico",
+  "nav": [
+    { "label": "// Home", "href": "/" },
+    { "label": "// Games", "href": "/projects" },
+    { "label": "// Thesis", "href": "/thesis" },
+    { "label": "// Studies", "href": "/studies" },
+    { "label": "// Thoughts", "href": "/thoughts" },
+    { "label": "// Contact", "href": "/contact" }
+  ]
+}

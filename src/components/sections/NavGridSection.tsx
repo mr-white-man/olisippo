@@ -2,7 +2,7 @@ import { Link } from '@tanstack/react-router'
 import type { NavGridSectionType } from '@/types/sections'
 
 export function NavGridSection({ section }: { section: NavGridSectionType; index: number }) {
-  const [games, thesis, thoughts, studies, contact] = section.items
+  const [games, thoughts, studies, contact] = section.items
   return (
     <section className="px-4 sm:px-6 lg:px-8 py-16">
       <div className="max-w-7xl mx-auto">
@@ -25,8 +25,8 @@ export function NavGridSection({ section }: { section: NavGridSectionType; index
               </div>
             </Link>
           )}
-          {[thesis, thoughts, studies, contact].map((item, i) => item && (
-            <Link key={item.id} to={item.href as any} className="category-card p-6 flex flex-col justify-between group" style={{ border: `1px solid ${item.accent}30`, ...(i === 3 ? { gridColumn: 'span 2' } : {}) }} data-sb-field-path={`.items[${i+1}]`}>
+          {[thoughts, studies, contact].map((item, i) => item && (
+            <Link key={item.id} to={item.href as any} className="category-card p-6 flex flex-col justify-between group" style={{ border: `1px solid ${item.accent}30`, ...(i === 2 ? { gridColumn: 'span 2' } : {}) }} data-sb-field-path={`.items[${i+1}]`}>
               <div>
                 <div className="font-heading text-2xl mb-3" style={{ color: item.accent }}>{item.icon}</div>
                 <div className="font-mono-game text-xs mb-1" style={{ color: `${item.accent}99` }}>0{i+2} // {item.sublabel.toUpperCase()}</div>

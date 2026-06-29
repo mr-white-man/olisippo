@@ -1,0 +1,15 @@
+{
+  "type": "page",
+  "title": "Thoughts",
+  "sections": [
+    {
+      "type": "PageHeaderSection",
+      "badge": "// SECTION_03 :: THOUGHTS.LOG",
+      "title": "THOUGHTS",
+      "titleAccent": "&IDEAS",
+      "accentColor": "var(--neon-green)",
+      "subtitle": "Dev logs, design philosophy, technical deep-dives, and everything in between."
+    },
+    { "type": "BlogListSection" }
+  ]
+}

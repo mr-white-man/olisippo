@@ -1,143 +1,15 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { allStudies } from 'content-collections'
-import { marked } from 'marked'
-import { useState } from 'react'
+import { SectionRenderer } from '@/components/SectionRenderer'
+import pageData from '../../content/pages/studies.json'
 
 export const Route = createFileRoute('/studies')({
   component: StudiesPage,
 })
 
-const accentColors = ['var(--neon-purple)', 'var(--neon-orange)']
-
 function StudiesPage() {
-  const [expanded, setExpanded] = useState<string | null>(null)
-
   return (
-    <div className="min-h-screen page-enter">
-      <div
-        className="px-4 sm:px-6 lg:px-8 py-16"
-        style={{
-          borderBottom: '1px solid rgba(191,95,255,0.1)',
-          background: 'radial-gradient(ellipse at 60% 40%, rgba(191,95,255,0.04) 0%, transparent 60%)',
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="font-mono-game text-xs mb-3" style={{ color: 'var(--neon-purple)' }}>
-            {'// SECTION_05 :: CASE.STUDIES'}
-          </div>
-          <h1 className="font-heading text-4xl sm:text-6xl font-black mb-4" style={{ color: 'white' }}>
-            CASE<span style={{ color: 'var(--neon-purple)' }}>.</span>STUDIES
-          </h1>
-          <p className="max-w-xl text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}>
-            Post-mortems, retrospectives, and deep-dives into the projects that taught the most — including what broke.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
-        {allStudies.map((study, i) => {
-          const accent = accentColors[i % accentColors.length]
-          const isOpen = expanded === study._meta.path
-          const html = marked(study.content)
-
-          return (
-            <div
-              key={study._meta.path}
-              className="game-card"
-              style={{ border: `1px solid ${accent}20` }}
-            >
-              {/* Header (always visible) */}
-              <button
-                className="w-full text-left p-8 flex gap-5 items-start group"
-                onClick={() => setExpanded(isOpen ? null : study._meta.path)}
-              >
-                <div
-                  className="font-heading text-4xl font-black flex-shrink-0 leading-none"
-                  style={{ color: `${accent}30` }}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="font-mono-game text-xs mb-2" style={{ color: `${accent}80` }}>
-                    {new Date(study.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short' })}
-                  </div>
-                  <h2 className="font-heading text-xl font-black mb-1" style={{ color: 'white' }}>
-                    {study.title}
-                  </h2>
-                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.45)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}>
-                    {study.subtitle}
-                  </p>
-
-                  {/* Outcomes */}
-                  <div className="flex flex-wrap gap-2 mt-4">
-                    {study.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-mono-game text-xs px-2 py-0.5"
-                        style={{
-                          border: `1px solid ${accent}25`,
-                          color: accent,
-                          background: `${accent}08`,
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div
-                  className="font-mono-game text-xs flex-shrink-0 transition-transform duration-300"
-                  style={{ color: accent, transform: isOpen ? 'rotate(90deg)' : 'none' }}
-                >
-                  ▶
-                </div>
-              </button>
-
-              {/* Outcomes bar */}
-              {!isOpen && (
-                <div className="px-8 pb-6">
-                  <div className="font-mono-game text-xs mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>
-                    KEY_OUTCOMES:
-                  </div>
-                  <ul className="space-y-1">
-                    {study.outcomes.map((outcome, oi) => (
-                      <li
-                        key={oi}
-                        className="text-xs flex items-start gap-2"
-                        style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}
-                      >
-                        <span style={{ color: accent }}>◈</span>
-                        {outcome}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Expandable content */}
-              {isOpen && (
-                <div
-                  className="px-8 pb-8"
-                  style={{ borderTop: `1px solid ${accent}15` }}
-                >
-                  <div
-                    className="prose-game mt-6"
-                    style={{
-                      color: 'rgba(255,255,255,0.7)',
-                      fontFamily: 'Rajdhani, sans-serif',
-                      fontWeight: 500,
-                      fontSize: '1rem',
-                      lineHeight: '1.75',
-                    }}
-                    dangerouslySetInnerHTML={{ __html: html }}
-                  />
-                </div>
-              )}
-            </div>
-          )
-        })}
-      </div>
+    <div className="min-h-screen page-enter" data-sb-object-id="pages/studies.json">
+      <SectionRenderer sections={pageData.sections as any} />
     </div>
   )
 }

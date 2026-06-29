@@ -1,0 +1,15 @@
+{
+  "type": "page",
+  "title": "Resume",
+  "sections": [
+    {
+      "type": "PageHeaderSection",
+      "badge": "// SECTION_07 :: EXPERIENCE.LOG",
+      "title": "EXP",
+      "titleAccent": ".LOG",
+      "accentColor": "var(--neon-cyan)",
+      "subtitle": "Professional experience, education, and the technical stack accumulated over 6 years of shipping games."
+    },
+    { "type": "ResumeSection" }
+  ]
+}

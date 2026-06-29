@@ -1,0 +1,15 @@
+{
+  "type": "page",
+  "title": "Projects",
+  "sections": [
+    {
+      "type": "PageHeaderSection",
+      "badge": "// SECTION_02 :: GAME.PROJECTS",
+      "title": "GAME",
+      "titleAccent": ".PROJECTS",
+      "accentColor": "var(--neon-cyan)",
+      "subtitle": "Shipped titles, prototypes, and jam entries. Each one a different problem space, a different aesthetic, a different lesson."
+    },
+    { "type": "ProjectsGridSection" }
+  ]
+}

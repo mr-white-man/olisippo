@@ -1,106 +1,15 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
-import { allBlogs } from 'content-collections'
+import { createFileRoute } from '@tanstack/react-router'
+import { SectionRenderer } from '@/components/SectionRenderer'
+import pageData from '../../content/pages/thoughts.json'
 
 export const Route = createFileRoute('/thoughts')({
   component: ThoughtsPage,
 })
 
 function ThoughtsPage() {
-  const posts = [...allBlogs].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  )
-
   return (
-    <div className="min-h-screen page-enter">
-      <div
-        className="px-4 sm:px-6 lg:px-8 py-16"
-        style={{
-          borderBottom: '1px solid rgba(57,255,20,0.1)',
-          background: 'radial-gradient(ellipse at 30% 50%, rgba(57,255,20,0.03) 0%, transparent 60%)',
-        }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <div className="font-mono-game text-xs mb-3" style={{ color: 'var(--neon-green)' }}>
-            {'// SECTION_03 :: THOUGHTS.LOG'}
-          </div>
-          <h1 className="font-heading text-4xl sm:text-6xl font-black mb-4" style={{ color: 'white' }}>
-            THOUGHTS<span style={{ color: 'var(--neon-green)' }}>&</span>IDEAS
-          </h1>
-          <p className="max-w-xl text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}>
-            Dev logs, design philosophy, technical deep-dives, and everything in between.
-          </p>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-6">
-        {posts.map((post, i) => (
-          <Link
-            key={post._meta.path}
-            to="/blog/$slug"
-            params={{ slug: post._meta.path }}
-            className="block group"
-          >
-            <div
-              data-sb-object-id={`blog/${post._meta.path}.md`}
-              className="game-card game-card-green p-6 flex gap-6 items-start"
-              style={{ border: '1px solid rgba(57,255,20,0.15)' }}
-            >
-              <div
-                className="font-heading text-4xl font-black flex-shrink-0 w-12 leading-none"
-                style={{ color: 'rgba(57,255,20,0.2)' }}
-              >
-                {String(i + 1).padStart(2, '0')}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="font-mono-game text-xs mb-2" style={{ color: 'rgba(57,255,20,0.7)' }}>
-                  {new Date(post.date).toLocaleDateString('en-US', {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric',
-                  })}
-                  {' // '}
-                  <span data-sb-field-path="author">{post.author}</span>
-                </div>
-                <h2
-                  data-sb-field-path="title"
-                  className="font-heading text-xl font-bold mb-2 group-hover:text-green-400 transition-colors"
-                  style={{ color: 'white' }}
-                >
-                  {post.title}
-                </h2>
-                <p
-                  data-sb-field-path="summary"
-                  className="text-sm leading-relaxed"
-                  style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'Rajdhani, sans-serif', fontWeight: 500 }}
-                >
-                  {post.summary}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="font-mono-game text-xs px-2 py-0.5"
-                      style={{
-                        border: '1px solid rgba(57,255,20,0.25)',
-                        color: 'var(--neon-green)',
-                        background: 'rgba(57,255,20,0.05)',
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="font-mono-game text-xs flex-shrink-0 group-hover:translate-x-1 transition-transform"
-                style={{ color: 'var(--neon-green)' }}
-              >
-                →
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <div className="min-h-screen page-enter" data-sb-object-id="pages/thoughts.json">
+      <SectionRenderer sections={pageData.sections as any} />
     </div>
   )
 }

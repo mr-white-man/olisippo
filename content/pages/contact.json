@@ -1,0 +1,24 @@
+{
+  "type": "page",
+  "title": "Contact",
+  "sections": [
+    {
+      "type": "PageHeaderSection",
+      "badge": "// SECTION_06 :: OPEN_CHANNEL",
+      "title": "CONTACT",
+      "titleAccent": ".ME",
+      "accentColor": "var(--neon-orange)",
+      "subtitle": "Open to collaboration, contracts, consulting, and interesting conversations. Games, systems, creative tech."
+    },
+    {
+      "type": "ContactSection",
+      "availability": "OPEN_TO_WORK // Contract & Full-Time",
+      "contacts": [
+        { "label": "EMAIL", "value": "kade@xero.dev", "icon": "◇" },
+        { "label": "GITHUB", "value": "github.com/kadexero", "icon": "</>" },
+        { "label": "DISCORD", "value": "kadexero#0001", "icon": "▸" },
+        { "label": "LOCATION", "value": "Remote / Austin, TX", "icon": "◈" }
+      ]
+    }
+  ]
+}

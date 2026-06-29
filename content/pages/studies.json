@@ -1,0 +1,15 @@
+{
+  "type": "page",
+  "title": "Studies",
+  "sections": [
+    {
+      "type": "PageHeaderSection",
+      "badge": "// SECTION_05 :: CASE.STUDIES",
+      "title": "CASE",
+      "titleAccent": ".STUDIES",
+      "accentColor": "var(--neon-purple)",
+      "subtitle": "Post-mortems, retrospectives, and deep-dives into the projects that taught the most — including what broke."
+    },
+    { "type": "StudiesSection" }
+  ]
+}

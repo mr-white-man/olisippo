@@ -2,7 +2,9 @@ import { createFileRoute } from '@tanstack/react-router'
 import { SectionRenderer } from '@/components/SectionRenderer'
 import homeData from '../../content/pages/home.json'
 
-export const Route = createFileRoute('/')({\n  component: HomePage,\n})
+export const Route = createFileRoute('/')({
+  component: HomePage,
+})
 
 export default function HomePage() {
   return (

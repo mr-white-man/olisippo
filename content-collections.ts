@@ -56,6 +56,8 @@ const projects = defineCollection({
     github: z.string().optional(),
     liveUrl: z.string().optional(),
     image: z.string().optional(),
+    // Array of image/gif/mp4 paths for the hover slideshow
+    media: z.array(z.string()).optional(),
     content: z.string(),
   }),
 })

@@ -5,6 +5,10 @@ description: A roguelike FPS with fully procedural level generation, holographic
 tags: [Unity, C#, HLSL, Procedural Gen, Multiplayer, Steam]
 github: https://github.com/kadexero/void-protocol
 liveUrl: https://store.steampowered.com/app/void-protocol
+media:
+  - /games/void-protocol.jpg
+  - /games/void-protocol-2.jpg
+  - /games/void-protocol.mp4
 image: /games/void-protocol.jpg
 ---
 

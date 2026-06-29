@@ -6,6 +6,10 @@ tags: [Unity, C#, Mobile, Time Mechanics, TouchInput, Analytics]
 github: https://github.com/kadexero/chrono-breach
 liveUrl: https://apps.apple.com/chrono-breach
 image: /games/chrono-breach.jpg
+media:
+  - /games/chrono-breach.jpg
+  - /games/chrono-breach-2.jpg
+  - /games/chrono-breach.mp4
 ---
 
 **Chrono Breach** puts time itself in the player's hands. Every action is recorded and can be rewound — enemies, projectiles, and environmental hazards all move backwards in perfect sync.

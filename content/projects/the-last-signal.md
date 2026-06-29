@@ -5,6 +5,10 @@ description: A psychological horror narrative game where players investigate an 
 tags: [Unity, C#, Narrative Design, FMOD, Horror, Atmosphere]
 github: https://github.com/kadexero/the-last-signal
 liveUrl: https://kadexero.itch.io/the-last-signal
+media:
+  - /games/the-last-signal.jpg
+  - /games/the-last-signal-2.jpg
+  - /games/the-last-signal.mp4
 image: /games/last-signal.jpg
 ---
 

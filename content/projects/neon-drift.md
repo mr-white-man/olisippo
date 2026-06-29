@@ -5,6 +5,10 @@ description: An arcade racing game set in a neon-soaked cyberpunk city. Features
 tags: [Unreal Engine, C++, Blueprints, Physics, Procedural Audio]
 github: https://github.com/kadexero/neon-drift
 liveUrl: https://kadexero.itch.io/neon-drift
+media:
+  - /games/neon-drift.jpg
+  - /games/neon-drift-2.jpg
+  - /games/neon-drift.mp4
 image: /games/neon-drift.jpg
 ---
 
